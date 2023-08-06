@@ -12,7 +12,7 @@ model = tf.keras.Sequential([tf.keras.layers.Flatten(input_shape=(28,28)),
                              tf.keras.layers.Dense(32, activation='softmax'),
                              tf.keras.layers.Dense(32, activation='softmax'),
                              tf.keras.layers.Dense(32, activation='softmax'),
-                             tf.keras.layers.Dense(10,activation='relu')])
+                             tf.keras.layers.Dense(2,activation='relu')])
 
 model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001),loss='sparse_categorical_crossentropy',metrics=['acc'])
 model.fit(train_im,train_lable,epochs=10)
